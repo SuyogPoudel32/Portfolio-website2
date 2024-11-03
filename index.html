@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="body">
+    <div class="overlay" id="overlay"></div>
+    <header>
+        <div class="image">
+            <img src="images/Screenshot 2024-10-30 183535.jpg" alt="">
+        </div>
+        <div class="siderbr" id="first-side-br">
+            <ul>
+               <li>Home</li>
+                <li>About</li>
+                <li>Skills</li>
+                <li>Projects</li>
+                <li>Contact</li>
+            </ul>
+            <div class="search-br">
+                <input type="text" placeholder="Search...">
+                <div class="search-icn" id="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+        </div>
+        <div class="bars" onclick="toggleSidebar()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="siderbr hidden-br" id="hidden-br">
+            <div class="cross-br-tyoe">
+                <div class="cross-bar">
+                    <i class="fa-solid fa-x" id="cross"></i>
+                </div>
+            </div>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Skills</li>
+                <li>Projects</li>
+                <li>Contact</li>
+            </ul>
+            <div class="search-br">
+                <input type="text" placeholder="Search...">
+                <div class="search-icn" id="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="section2">
+        <div class="text-part">
+            <div class="first-text">
+                <span>Proble Enstlaction Proponit</span>
+            </div>
+            <div class="second-text">
+                <h3>Web-reuised</h3>
+                <h3>Stell Database</h3>
+                <h3>& TechPortfolio</h3>
+            </div>
+            <div class="third-text">
+                <span>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam corrupti natus harum minus dolore. Cupiditate, id praesentium vitae ratione itaque sint dolorum.
+                </span>
+            </div>
+            <div class="media">
+            <div onclick="email_show()" class="email-button common">
+                <a href="#"><i class="fa-solid fa-envelope"></i></a>            
+            </div>
+            <div class="facebook-button common">
+                <a href="https://www.facebook.com/No.guess.908" target="_blank"><i  class="fa-brands fa-facebook-f"></i></a>
+            </div>
+            <div  class="insta-button common">
+                <a href="https://www.instagram.com/suyogpoude_69/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div  class="github-button common">
+                <a href="https://github.com/SuyogPoudel32/" target="_blank"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+        </div>
+        <div id="blur-image" class="image-part">
+            <img src="images/IMG_20231230_181037-removebg-preview.png" alt="">
+        </div>
+    </div>
+
+    <!-- <div style="height: 100vh;"></div> -->
+</body>
+
+
+
+
+
+
+<script>
+
+    let show_bar = document.getElementById("hidden-br");
+    let overlay = document.getElementById("overlay");
+    let cross = document.getElementById("cross");
+    let image_remove = document.getElementById("blur-image");
+    function toggleSidebar() {
+        if (show_bar.style.display === "flex") {
+            show_bar.style.display = "none";
+            overlay.style.display = "none";
+        }
+        else {
+            show_bar.style.display = "flex";
+            overlay.style.display = "block";
+            image_remove.style.display="none";
+        }
+    }
+    cross.onclick = function () {
+        toggleSidebar();
+        image_remove.style.display="flex";
+    }
+    overlay.onclick = function () {
+        image_remove.style.display="flex";
+        toggleSidebar();
+    }
+    // email show
+    function email_show() {
+        alert("suyogpoudel458@gmail.com");
+    }
+
+</script>
+
+</html>
